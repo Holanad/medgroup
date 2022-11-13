@@ -580,6 +580,18 @@ input.error {
           transform: translateY(-50%) rotate(-45deg);
 }
 
+.intro {
+  height: 100%;
+}
+
+.intro .container {
+  height: 100%;
+}
+
+.intro-wrapper {
+  height: 100%;
+}
+
 .intro-block {
   width: 830px;
   text-align: right;
@@ -693,6 +705,7 @@ input.error {
   font-family: 'Roboto-Bold';
   text-align: center;
   margin-top: 20px;
+  text-transform: uppercase;
 }
 
 .manufactures-wrapper {
@@ -833,11 +846,11 @@ input.error {
 }
 
 .contact-info-item:hover.link svg path {
-  fill: #005776;
+  fill: #32DED1;
 }
 
 .contact-info-item:hover.link span {
-  color: #005776;
+  color: #32DED1;
 }
 
 .contact-map {

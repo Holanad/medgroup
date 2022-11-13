@@ -229,6 +229,13 @@ input.error {
     }
 }
 .intro {
+    height: 100%;
+    .container {
+        height: 100%;
+    }
+    &-wrapper {
+        height: 100%;
+    }
     &-block {
         width: 830px;
         text-align: right;
@@ -328,6 +335,7 @@ input.error {
             font-family: 'Roboto-Bold';
             text-align: center;
             margin-top: 20px;
+            text-transform: uppercase;
         }
     }
 }
@@ -445,11 +453,11 @@ input.error {
                 &.link {
                     svg {
                         path {
-                            fill: #005776;
+                            fill: #32DED1;
                         }
                     }
                     span {
-                        color: #005776;
+                        color: #32DED1;
                     }
                 }
             }
