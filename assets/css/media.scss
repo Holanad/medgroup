@@ -269,12 +269,15 @@
     }
     .__index {
         main {
-            height: calc(100% - 110px);
+            height: 100vh;
+            height: calc((var(--vh, 1vh) * 100) - 110px);
         }
     }
     .__contact {
         main {
-            height: calc(100% - 110px);
+            //height: calc(100% - 110px);
+            height: 100vh;
+            height: calc((var(--vh, 1vh) * 100) - 110px);
         }
     }
     .copywriter {
@@ -322,6 +325,7 @@
             font-size: 25px;
         }
         &-list {
+            flex-wrap: wrap;
             margin-top: 15px;
             justify-content: space-around;
         }
