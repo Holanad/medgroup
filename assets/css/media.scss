@@ -481,11 +481,26 @@
             justify-content: space-between;
             display: flex;
             &__link {
-                width: 48%;
+                width: 50%;
+                
+                border-bottom: 1px solid #D8CBFE;
                 &:not(:last-child) {
                     margin-right: 0;
                 }
+                &:nth-child(even) {
+                    border-left: 1px solid #D8CBFE;
+                    padding-left: 10px;
+                }
             }
+            &:last-child {
+                .manufactures-line__link {
+                    &:nth-last-child(-n + 2) {
+                        border-bottom: none;
+                    }
+                }
+            }
+            
+
         }
     }
 }

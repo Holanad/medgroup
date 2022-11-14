@@ -1,5 +1,13 @@
 // JavaScript Code
 
+
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+window.addEventListener('resize', () => {
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+})
+
+
 const headerLangCurrentElem = document.querySelector('.header-lang');
 
 headerLangCurrentElem.addEventListener('click', () => {

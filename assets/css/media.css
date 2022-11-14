@@ -48,6 +48,7 @@
     margin-right: 40px;
   }
 }
+
 @media screen and (max-width: 992px) {
   a, span, p, input, button, select, option, textarea, label {
     font-size: 18px;
@@ -89,11 +90,11 @@
   }
   .about {
     /* &-inner {
-         flex-direction: column;
-     }
-     &-image {
-         order: -1;
-     }*/
+            flex-direction: column;
+        }
+        &-image {
+            order: -1;
+        }*/
   }
   .about__title {
     font-size: 30px;
@@ -152,6 +153,7 @@
     margin-right: 40px;
   }
 }
+
 @media screen and (max-width: 768px) {
   a, span, p, input, button, select, option, textarea, label {
     font-size: 16px;
@@ -161,6 +163,7 @@
     padding: 0 10px;
   }
   .header {
+    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
   .header.active {
@@ -177,6 +180,7 @@
     display: block;
   }
   .header-nav {
+    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     opacity: 0;
     pointer-events: none;
@@ -190,7 +194,10 @@
     background: #fff;
   }
   .header-list {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 30px 0;
   }
   .header-item:not(:last-child) {
@@ -213,11 +220,11 @@
   }
   .__index main {
     height: 100vh;
-    height: calc(var(--vh, 1vh) * 100 - 110px);
+    height: calc((var(--vh, 1vh) * 100) - 110px);
   }
   .__contact main {
     height: 100vh;
-    height: calc(var(--vh, 1vh) * 100 - 110px);
+    height: calc((var(--vh, 1vh) * 100) - 110px);
   }
   .copywriter-elem {
     padding: 20px 0;
@@ -229,12 +236,17 @@
     width: 100%;
   }
   .about-inner {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .about-image {
     width: 235px;
     margin-bottom: 30px;
-    order: -1;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
   }
   .about__title {
     text-align: center;
@@ -257,9 +269,11 @@
     font-size: 25px;
   }
   .work-list {
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     margin-top: 15px;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .work-item {
     margin-bottom: 20px;
@@ -283,7 +297,10 @@
     margin-bottom: 18px;
   }
   .contact-inner {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .contact-map {
     width: 100%;
@@ -305,7 +322,10 @@
   }
   .manufactures-content-item {
     padding: 50px 0;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .manufactures-content-item-block {
     width: 100%;
@@ -319,7 +339,9 @@
     max-height: 77px;
   }
   .manufactures-content-item:nth-child(even) .manufactures-content-item__image {
-    order: unset;
+    -webkit-box-ordinal-group: unset;
+        -ms-flex-order: unset;
+            order: unset;
   }
   .manufactures-content-item__image {
     margin: 20px auto 0 auto;
@@ -328,6 +350,7 @@
     max-height: 300px;
   }
 }
+
 @media screen and (max-width: 576px) {
   a, span, p, input, button, select, option, textarea, label {
     font-size: 14px;
@@ -375,14 +398,28 @@
     padding-bottom: 50px;
   }
   .manufactures-line {
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   .manufactures-line__link {
-    width: 48%;
+    width: 50%;
+    border-bottom: 1px solid #D8CBFE;
   }
   .manufactures-line__link:not(:last-child) {
     margin-right: 0;
   }
-}/*# sourceMappingURL=media.css.map */
+  .manufactures-line__link:nth-child(even) {
+    border-left: 1px solid #D8CBFE;
+    padding-left: 10px;
+  }
+  .manufactures-line:last-child .manufactures-line__link:nth-last-child(-n + 2) {
+    border-bottom: none;
+  }
+}
+/*# sourceMappingURL=media.css.map */
