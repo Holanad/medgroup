@@ -182,16 +182,18 @@ input.error {
     }
     &-burger {
         position: relative;
-        width: 30px;
-        height: 24px;
+        width: 25px;
+        height: 18px;
         z-index: 3;
         transition: $anim-default;
         display: none;
+        /*margin-left: 0;
+        margin-right: 20px;*/
         span {
             position: absolute;
             left: 0;
             width: 100%;
-            background: #056BF1;
+            background: #412A83;
             height: 3px;
             border-radius: 3px;
             transition: all ease-in .2s;
@@ -239,8 +241,8 @@ input.error {
     &-block {
         width: 830px;
         text-align: right;
-        margin-left: auto;
         padding: 75px 0 60px 0;
+        margin: auto 0 0 auto;
     }
     &__title {
         font-size: 45px;
@@ -272,6 +274,7 @@ input.error {
         letter-spacing: 0.03em;
         color: #412A83;
         width: 638px;
+        margin-bottom: 20px;
     }
     &-content {
         width: 638px;
